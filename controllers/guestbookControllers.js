@@ -1,7 +1,7 @@
 const guestbookDAO = require("../models/guestbookModel");
 const userDao = require("../models/userModel.js");
 
-const db = new guestbookDAO();
+const db = new guestbookDAO("guestbook.db");
 db.init();
 
 exports.show_login = function (req, res) {
